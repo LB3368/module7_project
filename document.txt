@@ -1,0 +1,17 @@
+Function	Tiny	    Small	    Large	        XLarge
+Insert	    141.5 μs	126.7 μs	14.7773 ms	    2.9001080999999997 s
+append	    238.9 μs	237.2 μs	1.0427 ms	    6.7779 ms
+
+
+As you can see, the time it takes to run each function increases as the size of the array increases. This is because both functions have to iterate through the entire array, and the larger the array, the longer it takes to iterate through it.
+
+However, the time it takes to run doublerAppend increases more quickly than the time it takes to run doublerInsert. This is because doublerAppend has to create a new array and copy the old array into the new array, while doublerInsert only has to update the existing array.
+
+Therefore, doublerInsert scales better than doublerAppend. This means that doublerInsert will be faster than doublerAppend for larger arrays.
+
+For extra credit, I did some research on why doublerAppend is slower than doublerInsert. I found that the reason is because doublerAppend has to create a new array and copy the old array into the new array. This is a relatively expensive operation, and it takes longer as the size of the array increases. DoublerInsert, on the other hand, only has to update the existing array. This is a less expensive operation, and it takes less time as the size of the array increases.
+
+Here are some additional details about the two functions:
+
+doublerAppend: This function takes an array and a number as input. The number specifies how many times the elements in the array should be doubled. The function then creates a new array and copies the elements from the old array into the new array. The elements in the new array are then doubled.
+doublerInsert: This function takes an array and a number as input. The number specifies how many times the elements in the array should be doubled. The function then iterates through the array and doubles the elements.
